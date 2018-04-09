@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nz-layout class="layout">
-  <nz-header>
-    <div class="logo" style="float:left;width:30%;height:70px;"><img src="../assets/images/logo.png" alt="" style=""></div>
+  <nz-header class="header">
+    <div class="logo" style="float:left;width:35%;height:70px;"><img src="../assets/images/logo.png" alt="" style=""></div>
     <nz-dropdown [nzTrigger]="'click'"  class="login_account">
       <a href class="ant-dropdown-link" nz-dropdown>
         admin <i class="anticon anticon-down"></i>
@@ -22,24 +22,26 @@
     </ul>
   </nz-header>
   <nz-layout>
-    <nz-sider [nzWidth]="296" style="background:#fff">
-      <ul nz-menu [nzMode]="'inline'" style="height:100%">
-        <li nz-submenu>
-          <span title><i class="anticon anticon-home"></i>首页</span>
+    <nz-sider [nzWidth]="296" class="sider">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%;background:#e9e9e9;">
+        <li nz-menu-item class="ant-menu-item-selected" [routerLink]="['/home']">
+          <span title><i class="anticon anticon-home"></i><span>首页</span></span>
         </li>
-        <li nz-submenu>
-          <span title><i class="anticon anticon-tool"></i>案件管理</span>
+        <li nz-menu-item [routerLink]="['/case-manage']">
+          <span title><i class="anticon anticon-tool"></i><span>案件管理</span></span>
         </li>
-        <li nz-submenu>
-          <span title><i class="anticon anticon-appstore-o"></i>资源管理</span>
+        <li nz-menu-item [routerLink]="['/source-manage']">
+          <span title><i class="anticon anticon-appstore-o"></i><span>资源管理</span></span>
         </li>
-        <li nz-submenu>
-          <span title><i class="anticon anticon-usb"></i>串并案管理</span>
+        <li nz-menu-item [routerLink]="['/serial-manage']">
+          <span title><i class="anticon anticon-usb"></i><span>串并案管理</span></span>
         </li>
       </ul>
     </nz-sider>
-    <nz-layout style="padding:16px 0 0 16px;background:#f3f3f3">
-      <nz-content style="background:#fff;padding:24px;min-height:280px;">Content</nz-content>
+    <nz-layout style="padding:16px 40px 0 14px;background:#f3f3f3">
+      <nz-content style="min-height:280px;">
+        <router-outlet></router-outlet>
+      </nz-content>
     </nz-layout>
   </nz-layout>
 </nz-layout>

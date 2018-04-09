@@ -7,21 +7,37 @@
     line-height: 70px;
     background: #061f3e;
 }
-.ant-menu-item {
+.header .ant-menu-item {
     /* padding:0 45px; */
     font-size: 17px;
     width:16.66%;
     text-align: center;
 }
-.ant-menu-horizontal > .ant-menu-item:hover{
+.header  .ant-menu-horizontal > .ant-menu-item:hover{
     background: url(../assets/images/nav_bg.png) no-repeat;
     border-bottom: none;
     color: #fff;
 }
-.login_account {
+.header  .login_account {
     float:right;
-    width:5%;
+    width:6%;
 }
-.login_account a {
+.header  .login_account a {
     color:#fff;
+}
+.sider .ant-menu-inline .ant-menu-item{
+    font-size: 16px;
+    color:#000;
+    height:62px;
+    line-height: 62px;
+}
+.sider .ant-menu-item-selected {
+    color:#000;
+    background-color: #f3f3f3;
+}
+.sider .ant-menu-inline .ant-menu-item:after,.sider .ant-menu-vertical .ant-menu-item:after {
+    border:none;
+}
+.sider .ant-menu-item:hover {
+    color:#000;
 }
