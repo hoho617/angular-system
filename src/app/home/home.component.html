@@ -1,0 +1,66 @@
+<div class="x-content-inner">
+  <div nz-row [nzGutter]="14">
+    <div nz-col class="gutter-row" [nzSpan]="16">
+      <div class="gutter-box">
+        <nz-card class="x-card-title" [nzNoHovering]="true" [nzBordered]="false">
+          <ng-template #title>
+            <p>我的案件</p>
+          </ng-template>
+          <ng-template #body>
+              <nz-tabset class="x-case-menu">
+                <nz-tab *ngFor="let tab of tabs">
+                  <ng-template #nzTabHeading>{{tab.name}}</ng-template>
+                  <!-- <span>{{tab.content}}</span> -->
+                  <div class="x-tab-content">
+                      <ul class="x-case-list" *ngIf="tab.index ===0">
+                        <li nz-row [nzGutter]="0" class="x-case-item" *ngFor="let case of caseList">
+                            <div nz-col [nzSpan]="8" style="height:193px;position:relative;">
+                              <img [src]="case.imgSrc" alt="">
+                              <div class="x-float-name">案件名称：<span>{{case.caseName}}</span></div>
+                            </div>
+                            <div nz-col [nzSpan]="16">
+                              <ul class="x-info-list">
+                                <li class="x-info-item">案件名称：<span>{{case.caseName}}</span></li>
+                                <li class="x-info-item">案件编号：<span>{{case.caseNum}}</span></li>
+                                <li class="x-info-item">案件类型：<span>{{case.caseCate}}</span></li>
+                                <li class="x-info-item">创建时间：<span>{{case.buildDate}}</span></li>
+                                <li class="x-info-item">案发时间：<span>{{case.caseDate}}</span></li>
+                                <li class="x-info-item">创建人员：<span>{{case.buildPerson}}</span></li>
+                                <li class="x-info-item">案发地点：<span>{{case.caseAdd}}</span></li>
+                                <li class="x-info-item" [title]="case.caseDesc">案件描述：<span>{{case.caseDesc}}</span></li>
+                              </ul>
+                            </div>
+                            <div nz-col class="x-btn-yanpan">
+                                <button nz-button [nzType]="'primary'" [nzGhost]="true" [nzSize]="'large'">研判</button>
+                            </div>
+                        </li>
+                      </ul>
+                      <ul class="x-check-case-list" *ngIf="tab.index ===1">
+                        <li>
+                            <label nz-checkbox [(ngModel)]="allChecked" (ngModelChange)="updateAllChecked()" [nzIndeterminate]="indeterminate">
+                              <span>Check all</span>
+                            </label>
+                          <br>
+                          <!-- <nz-checkbox-group [(ngModel)]="checkOptionsOne" (ngModelChange)="updateSingleChecked()">
+                            <img src="../../assets/images/img_01.jpg" alt="">
+                          </nz-checkbox-group> -->
+                          <div *ngFor="let option of checkOptionsOne">
+                              <label nz-checkbox [(ngModel)]="option.checked" (ngModelChange)="updateSingleChecked()">
+                                <span>Check all</span>
+                              </label>
+                          </div>
+                          
+                        </li>
+                      </ul>
+                  </div>
+                </nz-tab>
+              </nz-tabset>
+          </ng-template>
+        </nz-card>
+      </div>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="8">
+      <div class="gutter-box">col-4</div>
+    </div>
+  </div>
+</div>
