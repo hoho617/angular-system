@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    NgZorroAntdModule.forRoot()
+    NgZorroAntdModule.forRoot({extraFontName:'anticon',extraFontUrl:'./assets/fonts/iconfont'})
   ],
   providers: [],
   bootstrap: [AppComponent]

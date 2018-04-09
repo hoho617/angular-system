@@ -1,0 +1,27 @@
+.ant-layout {
+    font-size: 16px;
+    font-family: microsoft yahei;
+}
+.ant-layout-header {
+    height:70px;
+    line-height: 70px;
+    background: #061f3e;
+}
+.ant-menu-item {
+    /* padding:0 45px; */
+    font-size: 17px;
+    width:16.66%;
+    text-align: center;
+}
+.ant-menu-horizontal > .ant-menu-item:hover{
+    background: url(../assets/images/nav_bg.png) no-repeat;
+    border-bottom: none;
+    color: #fff;
+}
+.login_account {
+    float:right;
+    width:5%;
+}
+.login_account a {
+    color:#fff;
+}

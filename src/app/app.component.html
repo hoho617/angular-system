@@ -1,3 +1,46 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<button nz-button [nzType]="'primary'">测试按钮</button>
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo" style="float:left;width:30%;height:70px;"><img src="../assets/images/logo.png" alt="" style=""></div>
+    <nz-dropdown [nzTrigger]="'click'"  class="login_account">
+      <a href class="ant-dropdown-link" nz-dropdown>
+        admin <i class="anticon anticon-down"></i>
+      </a>
+      <ul nz-menu>
+        <li nz-menu-item>admin1</li>
+        <li nz-menu-item>admin2</li>
+        <li nz-menu-item>admin3</li>
+      </ul>
+    </nz-dropdown>
+    <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" style="line-height:70px;background:#061f3e;color:#fff;float:left;width:55%;">
+      <li nz-menu-item>主页</li>
+      <li nz-menu-item>视频综合</li>
+      <li nz-menu-item>视图研判</li>
+      <li nz-menu-item>综合运维</li>
+      <li nz-menu-item>资源管理</li>
+      <li nz-menu-item>系统管理</li>
+    </ul>
+  </nz-header>
+  <nz-layout>
+    <nz-sider [nzWidth]="296" style="background:#fff">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%">
+        <li nz-submenu>
+          <span title><i class="anticon anticon-home"></i>首页</span>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-tool"></i>案件管理</span>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-appstore-o"></i>资源管理</span>
+        </li>
+        <li nz-submenu>
+          <span title><i class="anticon anticon-usb"></i>串并案管理</span>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout style="padding:16px 0 0 16px;background:#f3f3f3">
+      <nz-content style="background:#fff;padding:24px;min-height:280px;">Content</nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
 
